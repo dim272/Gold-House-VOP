@@ -1,0 +1,513 @@
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+};
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+$color-dark: #242B33;
+$color-white: #FFFFFF;
+$color-gold: #D4C17F;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $color-dark;
+  color: $color-white;
+}
+
+a {
+  text-decoration: none;
+  color: $color-white;
+}
+
+button {
+  border: none;
+}
+
+input {
+  border: none;
+}
+
+.header {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(180deg, rgba(36,43,51,1) 0%, rgba(36,43,51,0.6) 50%, rgba(36,43,51,1) 100%), url("/../img/header_bg.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  &__topblock {
+    width: 1110px;
+    margin-top: 20px;
+    flex: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__mainblock {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0,12em;
+  }
+}
+
+.menu {
+  width: 541px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+    &--column {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  &__item {
+    text-decoration: none;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0,05em;
+  }
+}
+
+.content {
+  width: 582px;
+  height: 470px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &__h1 {
+    font-family: "Playfair Display";
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: $color-gold;
+  }
+
+  &__block {
+
+    &--flex {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+	&__text {
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+	}
+
+	&__location {
+    position: relative;
+    margin-left: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      width: 21px;
+      height: 21px;
+      background-image: url("./../img/placeholder.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+	}
+
+	&__tel {
+    position: relative;
+    margin-left: 110px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: -36px;
+      width: 21px;
+      height: 21px;
+      background-image: url("./../img/phone-call.png");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+	}
+
+  &__image {
+
+    &--mouse{
+
+    }
+  }
+}
+
+.dignity {
+  width: 900px;
+  margin: 120px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+	&__card {
+    max-width: 195px;
+    margin: 0 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+	}
+
+	&__image {
+
+	}
+
+	&__text {
+    margin-top: 53px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 27px;
+    letter-spacing: 0em;
+	}
+
+}
+
+.apartments {
+  width: 1100px;
+  height: 806px;
+  margin: 0 auto;
+
+	&__title {
+    color: $color-gold;
+    font-family: Playfair Display;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 100px;
+	}
+
+	&__gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+	}
+
+	&__card {
+    position: relative;
+    width: 535px;
+    height: 320px;
+    &:nth-child(odd) {
+      background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, #242B33 100%), url("/../img/apartments1.png"), #D4C17F;
+    }
+    &:nth-child(even) {
+      background: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, #242B33 100%), url("/../img/apartments2.png"), #D4C17F;
+    }
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 30px;
+    }
+	}
+
+	&__text {
+    position: absolute;
+    width: 353px;
+    height: 22px;
+    left: 50px;
+    bottom: 50px;
+
+    font-family: Raleway;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: $color-white;
+	}
+
+}
+
+.feedback {
+  width: 100%;
+  height: 560px;
+  background: linear-gradient(180deg, #242B33 10.42%, rgba(36, 43, 51, 0) 50.52%, #242B33 90.1%), linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)), url("/../img/buildings_bg.png"), #C4C4C4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    &--bottom {
+      height: 136px;
+      background: none;
+      margin-bottom: 180px;
+    }
+
+  &__wrap {
+    width: 1110px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+      &--bottom {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+  }
+
+	&__content {
+    width: 540px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+	}
+
+	&__title {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-gold;
+	}
+
+	&__text {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+	}
+
+	&__form {
+    width: 540px;
+
+    &--bottom {
+      width: 1115px;
+    }
+	}
+
+}
+
+INPUT[type="text"],
+INPUT[type="tel"] {
+    color: $color-white;
+    font-family: Raleway;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+   }
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+    &--bottom {
+      flex-wrap: nowrap;
+    }
+
+	&__input {
+    height: 50px;
+    width: 255px;
+    background: rgba(255,255,255,0.2);
+    margin-bottom: 35px;
+
+      &--bottom {
+        margin: 0;
+      }
+
+    &::placeholder{
+      color: $color-white;
+      font-family: Raleway;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 27px;
+      letter-spacing: 0em;
+      text-align: center;
+    }
+
+	}
+
+	&__text {
+    font-family: Raleway;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: center;
+    padding: 0 5px;
+      &--bottom {
+        margin: 0;
+        order: -1;
+      }
+	}
+
+	&__button {
+    font-family: Raleway;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    height: 50px;
+    width: 255px;
+    color: $color-white;
+    background: $color-gold;
+    &--bottom {
+      margin: 0;
+    }
+	}
+
+}
+
+.video {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+	&__block {
+    width: 719px;
+    height: 650px;
+    background-image: url("./../img/video.png");
+	}
+}
+
+.map {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 180px;
+	&__block {
+    width: 1110px;
+    height: 494px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+	}
+
+  &__title {
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $color-gold;
+	}
+
+  &__image{
+    width: 1110px;
+    height: 358px;
+    background-image: url("./../img/map.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
+
+.footer {
+  width: 100%;
+  height: 272px;
+  background-color: #2D343C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	&__wrap {
+    width: 1110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+	}
+
+}
+
+.contacts {
+  height: 149px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+	&__text {
+    font-family: Raleway;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0,05em;
+    text-align: left;
+
+  	&--email {
+      color: $color-gold;
+  	}
+  }
+
+	&__socialblock {
+    width: 165px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	}
+
+	&__socialitem {
+    height: 20px;
+  	&--youtube {
+      width: 29px;
+      background: url("./../img/youtube.png");
+  	}
+
+  	&--vk {
+      width: 35px;
+      background: url("./../img/vk.png");
+  	}
+
+  	&--fb {
+      width: 20px;
+      background: url("./../img/fb.png");
+  	}
+
+  	&--instagram {
+      width: 20px;
+      background: url("./../img/instagram.png");
+  	}
+  }
+
+}
